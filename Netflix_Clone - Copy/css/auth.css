@@ -1,0 +1,149 @@
+/* =====================================================
+   AUTH PAGES — Login & Signup shared styles
+   ===================================================== */
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background:
+    linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.72)),
+    url("../Images/netflix bg.jpg") center/cover no-repeat fixed;
+}
+
+/* Nav */
+.auth-nav {
+  padding: 20px var(--page-pad);
+}
+.auth-nav img { height: 36px; width: auto; }
+
+/* Main */
+.auth-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--sp-xl) var(--page-pad);
+}
+
+/* Card */
+.auth-card {
+  width: 100%;
+  max-width: 450px;
+  background: rgba(0, 0, 0, .75);
+  border-radius: var(--radius-sm);
+  padding: 48px 68px 40px;
+}
+
+.auth-card h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: var(--sp-lg);
+}
+
+.auth-subtitle {
+  color: var(--clr-text-secondary);
+  margin-bottom: var(--sp-lg);
+  font-size: .95rem;
+}
+
+/* Submit button */
+.auth-submit {
+  width: 100%;
+  margin-top: var(--sp-lg);
+  font-size: 1rem;
+  padding: 14px;
+  border-radius: var(--radius-sm);
+}
+
+.form-error--global {
+  display: block;
+  text-align: center;
+  margin-top: var(--sp-md);
+  font-size: .85rem;
+}
+
+/* Options row */
+.auth-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--sp-lg);
+  font-size: .85rem;
+  color: var(--clr-text-secondary);
+}
+
+.auth-remember {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-xs);
+  cursor: pointer;
+}
+
+.auth-remember input[type="checkbox"] {
+  width: 16px; height: 16px;
+  accent-color: var(--clr-text-secondary);
+}
+
+/* Links */
+.auth-link {
+  color: var(--clr-text-secondary);
+  transition: color var(--transition-fast);
+}
+.auth-link:hover { color: var(--clr-text); }
+.auth-link--bold { color: var(--clr-text); font-weight: 600; }
+
+/* Footer area in card */
+.auth-footer {
+  /* margin-top: var(--sp-xl); */
+  color: var(--clr-text-secondary);
+  font-size: .95rem;
+}
+
+.auth-footer p { 
+  margin-bottom: 15px; 
+  text-align: left;
+}
+
+.auth-disclaimer {
+  margin-top: var(--sp-md);
+  font-size: .8rem;
+  color: var(--clr-text-dim);
+}
+
+/* Demo credentials box */
+.auth-demo {
+  margin-top: var(--sp-lg);
+  padding: var(--sp-md);
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: var(--radius-sm);
+  font-size: .82rem;
+  color: var(--clr-text-muted);
+}
+
+.auth-demo code {
+  background: rgba(255,255,255,.1);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: .8rem;
+}
+
+/* Page footer */
+.auth-page-footer {
+  padding: var(--sp-xl) var(--page-pad);
+  text-align: center;
+  font-size: .78rem;
+  color: var(--clr-text-dim);
+}
+
+
+/* Responsive */
+@media (max-width: 600px) {
+  .auth-card {
+    padding: 32px 24px;
+    max-width: 100%;
+    border-radius: 0;
+    background: rgba(0,0,0,.85);
+  }
+}

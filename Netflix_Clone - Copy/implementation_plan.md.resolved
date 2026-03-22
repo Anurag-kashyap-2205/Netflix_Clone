@@ -1,0 +1,165 @@
+# Full Netflix Frontend Clone — Implementation Plan
+
+Build a complete, multi-page Netflix frontend clone using only HTML, CSS, and vanilla JS with JSON dummy data for auth and movie content.
+
+## Architecture Overview
+
+```
+Netflix_Clone - Copy/
+├── index.html              ← Landing page (hero, FAQ, email CTA)
+├── login.html              ← Login page
+├── signup.html             ← Signup page
+├── browse.html             ← Main Netflix home (post-login)
+├── css/
+│   ├── global.css          ← Reset, variables, shared utilities
+│   ├── landing.css         ← Landing page styles
+│   ├── auth.css            ← Login & Signup shared styles
+│   └── browse.css          ← Browse page styles (rows, modal, player)
+├── js/
+│   ├── data.js             ← All movie/show data (categories, descriptions, video URLs)
+│   ├── users.js            ← Dummy user credentials
+│   ├── auth.js             ← Login/Signup/Session logic
+│   ├── landing.js          ← Landing page (FAQ accordion, email forms)
+│   ├── browse.js           ← Browse page (render rows, hero billboard, modal, player)
+│   └── utils.js            ← Shared helpers ($, $$, IntersectionObserver, slider)
+├── Images/                 ← Existing images (kept as-is)
+├── signin_page/            ← Old files (kept, not used)
+└── dashboard/              ← Old files (kept, not used)
+```
+
+## Proposed Changes
+
+---
+
+### 1. Data Layer
+
+#### [NEW] js/data.js
+All movie/show content for 6 categories: **Trending Now**, **Popular on Netflix**, **Top Rated**, **Critically Acclaimed**, **Bollywood Hits**, **New Releases**. Each movie object:
+```js
+{ id, title, img, banner, description, year, rating, duration, genres[], videoUrl, type }
+```
+`videoUrl` will use free public MP4 sample videos (e.g., from Blender open movies or sample-videos.com).
+
+#### [NEW] js/users.js
+Dummy users array + helper functions:
+```js
+const USERS = [
+  { email: "test@netflix.com", password: "netflix123", name: "Anurag" },
+  { email: "demo@netflix.com", password: "demo123", name: "Demo User" }
+];
+```
+Functions: `findUser(email, password)`, `registerUser(email, password, name)`, `isLoggedIn()`, `logout()`.
+
+---
+
+### 2. Landing Page
+
+#### [MODIFY] heropage.html → [NEW] index.html
+- Full landing page with hero, features grid, FAQ accordion, email CTA, footer.
+- Email form redirects to `signup.html` (pre-fills email).
+- Links to `login.html`.
+
+#### [NEW] css/landing.css
+- Hero with full-screen background, gradient overlay.
+- Feature cards with glassmorphism effects.
+- FAQ accordion.
+
+#### [NEW] js/landing.js
+- FAQ accordion logic.
+- Email form validation + redirect to signup.
+
+---
+
+### 3. Auth Pages
+
+#### [NEW] login.html
+Netflix-style login page:
+- Dark background with semi-transparent form card.
+- Email + Password fields with floating labels.
+- "Sign In" button validates against `users.js`.
+- "Remember Me" checkbox.
+- Link to `signup.html`.
+- On success → stores session in `localStorage` → redirects to `browse.html`.
+
+#### [NEW] signup.html
+Netflix-style signup page:
+- Similar design to login.
+- Email + Password + Name fields.
+- "Sign Up" button adds user to in-memory array + `localStorage`.
+- On success → auto-login → redirects to `browse.html`.
+
+#### [NEW] css/auth.css
+Shared styles for both login and signup (dark bg, centered card, floating labels, button styles).
+
+#### [NEW] js/auth.js
+- `handleLogin(email, password)` — validates against Users, stores session.
+- `handleSignup(name, email, password)` — registers, stores session.
+- `isLoggedIn()` — checks `localStorage`.
+- `logout()` — clears session, redirects to `index.html`.
+- `requireAuth()` — guard for `browse.html`, redirects if not logged in.
+
+---
+
+### 4. Browse Page (Main Netflix Home)
+
+#### [NEW] browse.html
+Post-login Netflix experience:
+- **Nav**: Logo, nav links (Home, TV Shows, Movies, New & Popular, My List), search icon, notification bell, profile avatar + dropdown with Logout.
+- **Hero Billboard**: Random featured movie with title, description, Play + More Info buttons.
+- **Content Rows**: 6 category rows, each with horizontal slider + left/right arrows.
+- **Detail Modal**: Full-width modal overlay with video player, movie info, similar titles.
+
+#### [NEW] css/browse.css
+- Fixed navbar with glassmorphism on scroll.
+- Billboard hero (full-width background image, gradient text, animated buttons).
+- Row sliders with scroll-snap, hover-expand poster cards showing controls (play, add, thumbs up) and metadata.
+- Detail modal: backdrop blur, embedded `<video>` player, responsive layout.
+- Custom video player controls styling.
+
+#### [NEW] js/browse.js
+- `renderBillboard()` — picks a featured movie, sets background + info.
+- `renderRows()` — iterates categories from [data.js](file:///Users/yashdevani/Desktop/Anurag%20Final%20Year%20Project/Netflix_Clone%20-%20Copy/data.js), creates slider rows dynamically.
+- `initSliders()` — left/right scroll with edge-detection arrows.
+- `openModal(movieId)` — opens detail modal with movie info + video player.
+- `closeModal()` — closes modal, pauses video.
+- Profile dropdown toggle + logout.
+- Auth guard: redirects to `login.html` if not logged in.
+
+---
+
+### 5. Shared Utilities
+
+#### [NEW] css/global.css
+- CSS reset, custom properties (brand colors, surfaces, spacing, radius, transitions).
+- Google Fonts (Inter).
+- Shared button styles, floating labels, scrollbar hiding.
+- Responsive breakpoints.
+
+#### [NEW] js/utils.js
+- [$(selector)](file:///Users/yashdevani/Desktop/Anurag%20Final%20Year%20Project/Netflix_Clone%20-%20Copy/script.js#9-13) / [$$(selector)](file:///Users/yashdevani/Desktop/Anurag%20Final%20Year%20Project/Netflix_Clone%20-%20Copy/script.js#13-14) — DOM helpers.
+- `initRevealObserver()` — IntersectionObserver for scroll animations.
+- `createSlider(container)` — reusable slider logic with edge-aware arrows.
+
+---
+
+## User Review Required
+
+> [!IMPORTANT]
+> **Video Sources**: Since this is a frontend-only clone, I'll use free public domain sample videos (Big Buck Bunny, Sintel trailers from Blender Foundation). These are MP4 files loaded from public CDNs. No actual Netflix content.
+
+> [!NOTE]
+> The existing `signin_page/` and `dashboard/` folders will be **kept but no longer used**. The new pages replace them entirely. Old files [test.html](file:///Users/yashdevani/Desktop/Anurag%20Final%20Year%20Project/Netflix_Clone%20-%20Copy/test.html), [test2.html](file:///Users/yashdevani/Desktop/Anurag%20Final%20Year%20Project/Netflix_Clone%20-%20Copy/test2.html), [test.js](file:///Users/yashdevani/Desktop/Anurag%20Final%20Year%20Project/Netflix_Clone%20-%20Copy/test.js), [fileread.json](file:///Users/yashdevani/Desktop/Anurag%20Final%20Year%20Project/Netflix_Clone%20-%20Copy/fileread.json) will also be left untouched.
+
+---
+
+## Verification Plan
+
+### Manual Verification (Open in Browser)
+1. **Landing page** (`index.html`): Open in browser → verify hero, features grid, FAQ accordion (click open/close), email form validation, responsive layout on resize.
+2. **Signup flow**: Click "Sign Up" → fill form → verify success → should redirect to `browse.html`.
+3. **Login flow**: Go to `login.html` → use `test@netflix.com` / `netflix123` → verify redirect to `browse.html`.
+4. **Auth guard**: Try opening `browse.html` directly without login → should redirect to `login.html`.
+5. **Browse page**: Verify hero billboard, 6 category rows with slider arrows working, poster hover effects.
+6. **Movie detail modal**: Click any poster → modal opens with video player + movie info → click Play → video plays → close modal.
+7. **Logout**: Click profile avatar → Logout → verify redirect to `index.html` + session cleared.
+8. **Responsive**: Resize to mobile → verify nav collapses, rows scroll properly, modal is full-screen.

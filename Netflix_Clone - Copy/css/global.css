@@ -1,0 +1,269 @@
+/* =====================================================
+   NETFLIX CLONE — GLOBAL STYLESHEET
+   Reset, design tokens, shared components.
+   ===================================================== */
+
+/* ─── Google Font ─── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* ─── CSS Custom Properties ─── */
+:root {
+  /* Brand */
+  --clr-brand:          #e50914;
+  --clr-brand-hover:    #b20710;
+  --clr-brand-glow:     rgba(229, 9, 20, .35);
+
+  /* Surfaces */
+  --clr-bg:             #141414;
+  --clr-bg-dark:        #000;
+  --clr-surface:        #181818;
+  --clr-surface-raised: #232323;
+  --clr-surface-glass:  rgba(20, 20, 20, .8);
+  --clr-card:           linear-gradient(145deg, #1a1f3d 0%, #230e18 100%);
+
+  /* Text */
+  --clr-text:           #fff;
+  --clr-text-secondary: #b3b3b3;
+  --clr-text-muted:     rgba(255, 255, 255, .7);
+  --clr-text-dim:       rgba(255, 255, 255, .45);
+
+  /* Borders & Input */
+  --clr-border:         rgba(255, 255, 255, .15);
+  --clr-input-bg:       #333;
+  --clr-input-focused:  #454545;
+  --clr-error:          #e87c03;
+  --clr-success:        #46d369;
+
+  /* Spacing */
+  --sp-2xs: .125rem;
+  --sp-xs:  .25rem;
+  --sp-sm:  .5rem;
+  --sp-md:  1rem;
+  --sp-lg:  1.5rem;
+  --sp-xl:  2rem;
+  --sp-2xl: 3rem;
+  --sp-3xl: 4rem;
+
+  /* Radius */
+  --radius-xs:   2px;
+  --radius-sm:   4px;
+  --radius-md:   6px;
+  --radius-lg:   8px;
+  --radius-xl:   12px;
+  --radius-pill: 100px;
+
+  /* Transitions */
+  --ease-out:         cubic-bezier(.25, .46, .45, .94);
+  --ease-in-out:      cubic-bezier(.42, 0, .58, 1);
+  --transition-fast:  .15s var(--ease-out);
+  --transition-med:   .3s var(--ease-out);
+  --transition-slow:  .5s var(--ease-out);
+
+  /* Layout */
+  --page-pad:    clamp(1rem, 4vw, 3.75rem);
+  --nav-height:  68px;
+
+  /* Z-indices */
+  --z-nav:    100;
+  --z-modal:  500;
+  --z-toast:  600;
+}
+
+
+/* ─── Reset ─── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: var(--clr-bg-dark);
+  color: var(--clr-text);
+  overflow-x: hidden;
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol { list-style: none; }
+
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+button { cursor: pointer; }
+
+
+/* ─── Shared Button System ─── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-sm);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background var(--transition-fast),
+              box-shadow var(--transition-fast),
+              transform var(--transition-fast),
+              opacity var(--transition-fast);
+}
+
+.btn:active { transform: scale(.97); }
+
+.btn--primary {
+  background: var(--clr-brand);
+  color: var(--clr-text);
+}
+.btn--primary:hover {
+  background: var(--clr-brand-hover);
+}
+
+.btn--white {
+  background: #fff;
+  color: #000;
+}
+.btn--white:hover {
+  background: rgba(255,255,255,.8);
+}
+
+.btn--dark {
+  background: rgba(109,109,110,.7);
+  color: #fff;
+}
+.btn--dark:hover {
+  background: rgba(109,109,110,.4);
+}
+
+.btn--ghost {
+  background: transparent;
+  border: 1px solid var(--clr-border);
+  color: var(--clr-text);
+}
+.btn--ghost:hover {
+  background: rgba(255,255,255,.1);
+}
+
+.btn--xs  { padding: 4px 10px; font-size: .75rem; }
+.btn--sm  { padding: 7px 16px; font-size: .85rem; }
+.btn--md  { padding: 10px 24px; font-size: .95rem; }
+.btn--lg  { padding: 12px 28px; font-size: 1.1rem; }
+.btn--xl  { padding: 14px 36px; font-size: 1.2rem; }
+
+.btn--round { border-radius: 50%; padding: 0; }
+.btn--icon {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,.5);
+  background: rgba(42,42,42,.6);
+  font-size: 1rem;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.btn--icon:hover {
+  border-color: #fff;
+  background: rgba(42,42,42,.9);
+}
+
+/* ─── Floating Label Input ─── */
+.form-group {
+  position: relative;
+  margin-bottom: var(--sp-md);
+}
+
+.form-input {
+  width: 100%;
+  padding: 24px 16px 8px;
+  background: var(--clr-input-bg);
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  color: var(--clr-text);
+  font-size: 1rem;
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.form-input:focus {
+  border-color: var(--clr-text-secondary);
+  background: var(--clr-input-focused);
+}
+
+.form-label {
+  position: absolute;
+  top: 50%; left: 16px;
+  transform: translateY(-50%);
+  color: var(--clr-text-secondary);
+  font-size: 1rem;
+  pointer-events: none;
+  transition: all var(--transition-fast);
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  top: 10px;
+  font-size: .7rem;
+  color: var(--clr-text-secondary);
+  transform: translateY(0);
+}
+
+.form-error {
+  display: block;
+  margin-top: 6px;
+  font-size: .8rem;
+  color: var(--clr-error);
+  min-height: 1.1em;
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,.15);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,.25);
+}
+
+/* ─── Reveal animation ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .6s var(--ease-out), transform .6s var(--ease-out);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── Screen reader only ─── */
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}

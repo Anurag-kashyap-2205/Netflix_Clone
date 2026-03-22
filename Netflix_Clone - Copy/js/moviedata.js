@@ -1,0 +1,853 @@
+/* =====================================================
+   DATA — Movie & Show catalogue
+   6 categories, each with 10 titles.
+   ===================================================== */
+
+const MOVIES = [
+  {
+    id: 1,
+    title: "Dhurandhar",
+    img: "movies img/dhurandhar.webp",
+    banner: "banners/dhurandar.jpg",
+    description: "An underworld saga following a network of criminals, informants and operatives whose lives intersect, navigating covert operations, espionage and betrayals.",
+    year: 2025,
+    rating: "A",
+    duration: "3h 25m",
+    genres: ["Thriller", "Crime", "Action"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+  },
+  {
+    id: 4,
+    title: "Tere Ishq Mein",
+    img: "movies img/tere ishq mein.webp",
+    banner: "movies img/tere ishq mein.webp",
+    description: "Shankar and Mukti's intense love story unfolds against the backdrop of Benaras, exploring surrender and transformation that heals, hurts and changes them.",
+    year: 2025,
+    rating: "U/A 16+",
+    duration: "2h 47m",
+    genres: ["Romance", "Drama"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
+  },
+  {
+    id: 7,
+    title: "Frankenstein",
+    img: "movies img/frankenstein.jpg",
+    banner: "movies img/frankenstein.jpg",
+    description: "A modern retelling of Mary Shelley's classic where a brilliant scientist's creation threatens to destroy everything he holds dear.",
+    year: 2024,
+    rating: "U/A 16+",
+    duration: "1h 52m",
+    genres: ["Horror", "Sci-Fi", "Drama"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+   {
+    id: 9,
+    title: "Raat Akeli Hai",
+    img: "movies img/raat aleki hai.webp",
+    banner: "Images/trending image/raat akeli hai img.webp",
+    description: "A small-town cop investigates the murder of a wealthy patriarch on his wedding night, uncovering dark family secrets.",
+    year: 2020,
+    rating: "U/A 16+",
+    duration: "2h 16m",
+    genres: ["Mystery", "Crime", "Drama"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4"
+  },
+   {
+    id: 201,
+    title: "Anora",
+    img: "movies img/anora.jpg",
+    banner: "banners/anora.webp",
+    description: "Anora, a young woman from Brooklyn, gets her chance at a Cinderella story when she meets and marries the son of an oligarch. Once the news reaches Russia, her fairytale is threatened as the parents set out for New York to get the marriage annulled.",
+    year: 2020,
+    rating: "A",
+    duration: "2h 19m",
+    genres: ["Offbeat", "romance", "Dark Comedy"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+  },
+  {
+    id: 202,
+    title: "War Machine",
+    img: "movies img/warmachine.jpg",
+    banner: "Images/popular image/War Machine.jpg",
+    description: "During the final stage of US Army Ranger selection, an elite team's training exercise turns into a fight for survival against an unimaginable threat.",
+    year: 2026,
+    rating: "U/A 16+",
+    duration: "1h 49m",
+    genres: ["Sci-Fi", "Violent", "Suspenseful"],
+    type: "TV Show",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+  },
+  {
+    id: 203,
+    title: "Gladiator",
+    img: "movies img/giladiator.jpg",
+    banner: "movies img/giladiator.jpg",
+    description: "Years after witnessing the death of Maximus at the hands of his uncle, Lucius must enter the Colosseum after the powerful emperors of Rome conquer his home. With rage in his heart and the future of the empire at stake, he looks to the past to find the strength and honor needed to return the glory of Rome to its people.",
+    year: 2024,
+    rating: "U/A 16+",
+    duration: "2h 28m",
+    genres: ["Epic", "Sword & Sandal", "Action"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+  },
+  {
+    id: 206,
+    title: "Chennai Express",
+    img: "movies img/chennaiexp.webp",
+    banner: "Images/popular image/Chennai Express.jpg",
+    description: "Rahul, a young man, sets out to immerse his late grandfather's ashes at Rameshwaram. However, when he helps Meena, a runaway bride, board a train, he has to face the ire of her criminal family.",
+    year: 2013,
+    rating: "U/A 13+",
+    duration: "2h 14m",
+    genres: ["Exciting", "Emotional", "Adventure"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+  },
+  {
+    id: 207,
+    title: "Chhaava",
+    img: "movies img/chhava.webp",
+    banner: "Images/popular image/Chhaava.jpg",
+    description: "Shivaji's death sparks the Maratha-Mughal conflict. His son Sambhaji leads resistance against Aurangzeb's forces. Amid battles and intrigue, both sides face challenges in a struggle for power..",
+    year: 2025,
+    rating: "U/A 13+",
+    duration: "2h 41m",
+    genres: ["Action", "Epic", "History"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+  },
+  {
+    id: 13,
+    title: "Red Notice",
+    img: "movies img/red notice.jpg",
+    banner: "Images/popular image/red-notice.jpg",
+    description: "An FBI agent teams up with a notorious art thief to catch an even more notorious criminal in a globe-trotting adventure.",
+    year: 2021,
+    rating: "U/A 13+",
+    duration: "1h 58m",
+    genres: ["Action", "Comedy", "Thriller"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+  },
+  {
+    id: 15,
+    title: "Extraction",
+    img: "movies img/extaction.jpg",
+    banner: "banners/extraction.webp",
+    description: "A hardened mercenary's mission becomes a soul-searching race to survive when he's sent to rescue a crime lord's kidnapped son.",
+    year: 2020,
+    rating: "U/A 16+",
+    duration: "1h 58m",
+    genres: ["Action", "Thriller"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"
+  },
+    {
+    id: 18,
+    title: "13 Hours",
+    img: "movies img/13hours.webp",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "A security team consisting of six members fights to defend an American diplomatic compound in Benghazi, Libya, against a wave of terrorist attacks.",
+    year: 2025,
+    rating: "A",
+    duration: "2h 25m",
+    genres: ["Explosive", "Action", "Thriller"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 19,
+    title: "Fifty Shades of Grey",
+    img: "movies img/50shades.webp",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "A coming-of-age drama exploring the lives of teenagers navigating love, identity, and the pressures of growing up in a connected world.",
+    year: 2025,
+    rating: "A",
+    duration: "2h 5m",
+    genres: ["Romance", "Exotic", "Steamy"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 20,
+    title: "83",
+    img: "movies img/83.webp",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "The incredible true story of the Indian cricket team's underdog victory at the 1983 World Cup.",
+    year: 2021,
+    rating: "U/A 13+",
+    duration: "2h 42m",
+    genres: ["Biography", "Drama", "Sports"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 21,
+    title: "365 Days",
+    img: "movies img/365.webp",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "A fiery executive in a spiritless relationship falls victim to a dominant mafia boss who imprisons her.",
+    year: 2020,
+    rating: "A",
+    duration: "1h 54m",
+    genres: ["Drama", "Romance"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 22,
+    title: "Adam Project",
+    img: "movies img/adam project.jpg",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "After accidentally crash-landing in 2022, time-traveling fighter pilot Adam Reed teams up with his 12-year-old self.",
+    year: 2022,
+    rating: "U/A 13+",
+    duration: "1h 46m",
+    genres: ["Action", "Adventure", "Sci-Fi"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 23,
+    title: "Animal",
+    img: "movies img/animal.webp",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "A son's obsessive love for his father leads to a brutal cycle of violence and vengeance.",
+    year: 2023,
+    rating: "A",
+    duration: "3h 21m",
+    genres: ["Action", "Crime", "Drama"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 24,
+    title: "Atlas",
+    img: "movies img/atlas.jpg",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "A brilliant data analyst with a deep distrust of AI joins a mission to capture a renegade robot.",
+    year: 2024,
+    rating: "U/A 13+",
+    duration: "1h 58m",
+    genres: ["Action", "Sci-Fi", "Thriller"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 25,
+    title: "Baramulla",
+    img: "movies img/baramulla.jpg",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "A gripping psychological thriller set against the volatile backdrop of the Baramulla district in Kashmir.",
+    year: 2024,
+    rating: "U/A 16+",
+    duration: "2h 10m",
+    genres: ["Thriller", "Mystery"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 26,
+    title: "Bhool Bhulaiyaa 3",
+    img: "movies img/BB3.webp",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "Rooh Baba returns to face a terrifying spirit in a haunted mansion, blending laughs with chills.",
+    year: 2024,
+    rating: "U/A 13+",
+    duration: "2h 38m",
+    genres: ["Comedy", "Horror"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 30,
+    title: "Damsel",
+    img: "movies img/damsel.jpg",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "A dutiful damsel agrees to marry a handsome prince, only to find the royal family has recruited her as a sacrifice to repay an ancient debt.",
+    year: 2024,
+    rating: "U/A 13+",
+    duration: "1h 48m",
+    genres: ["Fantasy", "Action", "Adventure"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 31,
+    title: "Dangal",
+    img: "movies img/dangal.webp",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "Former wrestler Mahavir Singh Phogat and his two wrestler daughters struggle towards glory at the Commonwealth Games.",
+    year: 2016,
+    rating: "U",
+    duration: "2h 41m",
+    genres: ["Biography", "Action", "Drama"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 32,
+    title: "De De Pyaar De 2",
+    img: "movies img/dedepyaarde2.webp",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "Ashish and Ayesha's relationship faces a new set of hilarious and emotional challenges with their families.",
+    year: 2025,
+    rating: "U/A 13+",
+    duration: "2h 20m",
+    genres: ["Comedy", "Romance"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 33,
+    title: "Don't Look Up",
+    img: "movies img/dont look up.jpg",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "Two low-level astronomers must go on a giant media tour to warn mankind of an approaching comet that will destroy Earth.",
+    year: 2021,
+    rating: "A",
+    duration: "2h 18m",
+    genres: ["Comedy", "Sci-Fi", "Drama"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 34,
+    title: "Dragon",
+    img: "movies img/dragon.webp",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "A supernatural action thriller following a man who discovers he possesses the ancient power of the dragon.",
+    year: 2025,
+    rating: "U/A 16+",
+    duration: "2h 15m",
+    genres: ["Action", "Fantasy"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 35,
+    title: "Eko",
+    img: "movies img/eko.webp",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "A high-concept sci-fi thriller exploring the consequences of human-tech integration in a near-future society.",
+    year: 2025,
+    rating: "U/A 13+",
+    duration: "2h 05m",
+    genres: ["Sci-Fi", "Thriller"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 36,
+    title: "Jewel Thief",
+    img: "movies img/ewel theif.jpg",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "An urban heist thriller where a master of disguise targets the elite, leading to a high-stakes cat-and-mouse game.",
+    year: 2025,
+    rating: "U/A 16+",
+    duration: "2h 12m",
+    genres: ["Crime", "Thriller", "Action"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 37,
+    title: "Extraction",
+    img: "movies img/extraction.jpg",
+    banner: "banners/extraction.jpg",
+    description: "A former special forces operative must save the kidnapped son of an international crime lord.",
+    year: 2025,
+    rating: "U/A 16+",
+    duration: "1h 56m",
+    genres: ["Action", "Crime", "Drama"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+{
+    id: 38,
+    title: "Frankenstein",
+    img: "movies img/frankenstein.jpg",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "A modern reimagining of Mary Shelley's classic tale about a scientist who brings a creature to life.",
+    year: 2025,
+    rating: "A",
+    duration: "2h 10m",
+    genres: ["Horror", "Sci-Fi", "Drama"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 39,
+    title: "Gangubai Kathiawadi",
+    img: "movies img/gangubai.webp",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "Dupe into a life of prostitution, Gangubai becomes a powerful figure in the underworld and a champion for women's rights.",
+    year: 2022,
+    rating: "U/A 16+",
+    duration: "2h 32m",
+    genres: ["Biography", "Crime", "Drama"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 40,
+    title: "The Gray Man",
+    img: "movies img/greyman.jpg",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "When the CIA's most skilled operative reveals dark agency secrets, he becomes a target of international assassins.",
+    year: 2022,
+    rating: "U/A 13+",
+    duration: "2h 02m",
+    genres: ["Action", "Thriller"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 41,
+    title: "HAQ",
+    img: "movies img/HAQ.webp",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "A gritty legal drama centered on a lawyer's fight for justice against a corrupt systemic power.",
+    year: 2024,
+    rating: "U/A 16+",
+    duration: "2h 18m",
+    genres: ["Drama", "Crime"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 42,
+    title: "Heart of Stone",
+    img: "movies img/heart of stone.jpg",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "An intelligence operative for a shadowy global peacekeeping agency races to stop a hacker from stealing its most dangerous weapon.",
+    year: 2023,
+    rating: "U/A 13+",
+    duration: "2h 02m",
+    genres: ["Action", "Thriller", "Crime"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 43,
+    title: "Idli Kadai",
+    img: "movies img/idli kadai.webp",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "A heartwarming slice-of-life story following the daily struggles and joys of a small-town eatery owner.",
+    year: 2025,
+    rating: "U",
+    duration: "2h 10m",
+    genres: ["Drama", "Comedy"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 44,
+    title: "Interceptor",
+    img: "movies img/interceptor.jpg",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "An Army captain uses her years of tactical training to save humanity when a coordinated attack threatens a remote missile interceptor station.",
+    year: 2022,
+    rating: "A",
+    duration: "1h 39m",
+    genres: ["Action", "Adventure", "Thriller"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 45,
+    title: "Kalki 2898 AD",
+    img: "movies img/kalki.webp",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "In a post-apocalyptic world, a modern-day avatar of Vishnu descends to Earth to protect the world from evil forces.",
+    year: 2024,
+    rating: "U/A 13+",
+    duration: "3h 01m",
+    genres: ["Sci-Fi", "Action", "Drama"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 46,
+    title: "Karate Kid Legend",
+    img: "movies img/karatekid.webp",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "A new student from the US moves to Beijing and learns to defend himself through the teachings of a wise mentor.",
+    year: 2025,
+    rating: "U/A 13+",
+    duration: "2h 10m",
+    genres: ["Action", "Drama", "Family"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 47,
+    title: "Kathal",
+    img: "movies img/kathel.jpg",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "When two prized jackfruits disappear from a politician's garden, a spirited police officer finds herself solving a bizarre case.",
+    year: 2023,
+    rating: "U/A 13+",
+    duration: "1h 55m",
+    genres: ["Comedy", "Crime", "Mystery"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 48,
+    title: "Laapata Ladies",
+    img: "movies img/laapata ladies.webp",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "The misadventures of two young brides who get lost from the same train, leading to a series of funny and moving discoveries.",
+    year: 2024,
+    rating: "U/A 13+",
+    duration: "2h 02m",
+    genres: ["Comedy", "Drama"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 49,
+    title: "Jolly LLB 3",
+    img: "movies img/llb3.webp",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "The two Jollys face off in a court of law, tackling a massive case while navigating a world of corruption and humor.",
+    year: 2025,
+    rating: "U/A 13+",
+    duration: "2h 25m",
+    genres: ["Comedy", "Drama", "Crime"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 50,
+    title: "Lucky Baskar",
+    img: "movies img/lucky baskar.webp",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "A simple bank cashier's life takes a dramatic turn when he enters the high-stakes world of financial fraud.",
+    year: 2024,
+    rating: "U/A 13+",
+    duration: "2h 30m",
+    genres: ["Drama", "Crime", "Thriller"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 51,
+    title: "Maharaja",
+    img: "movies img/maharaja.webp",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "A barber seeks vengeance after his home is burgled, telling police his 'Lakshmi' has been stolen, leading to a twisted mystery.",
+    year: 2024,
+    rating: "U/A 16+",
+    duration: "2h 22m",
+    genres: ["Action", "Crime", "Drama"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 52,
+    title: "Maareesan",
+    img: "movies img/mareesan.webp",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "A period action-drama exploring the life of a warrior fighting against social injustice and oppression.",
+    year: 2025,
+    rating: "U/A 16+",
+    duration: "2h 35m",
+    genres: ["Action", "Drama"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 53,
+    title: "Mission Majnu",
+    img: "movies img/mission majnu.jpg",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "In the 1970s, an Indian spy undertakes a deadly mission to expose a covert nuclear weapons program in Pakistan.",
+    year: 2023,
+    rating: "U/A 16+",
+    duration: "2h 09m",
+    genres: ["Action", "Drama", "History"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 54,
+    title: "Mahaavtaar Narsimha",
+    img: "movies img/narsimha.webp",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "An animated epic depicting the story of Lord Vishnu's fourth incarnation as Narsimha to defeat the demon king Hiranyakashipu.",
+    year: 2024,
+    rating: "U",
+    duration: "1h 45m",
+    genres: ["Animation", "Action", "Fantasy"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 55,
+    title: "Nowhere",
+    img: "movies img/nowhere.jpg",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "A pregnant woman trapped in a shipping container adrift in the sea must struggle to survive after fleeing a totalitarian country.",
+    year: 2023,
+    rating: "A",
+    duration: "1h 49m",
+    genres: ["Drama", "Thriller"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 56,
+    title: "Oldgaurd",
+    img: "movies img/oldgard.jpg",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "A group of immortal mercenaries are suddenly exposed and must fight to keep their identity a secret.",
+    year: 2020,
+    rating: "A",
+    duration: "2h 05m",
+    genres: ["Action", "Fantasy"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 57,
+    title: "Om Shanti Om",
+    img: "movies img/omshantiom.webp",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "A struggling actor is reincarnated to seek justice for the murder of the woman he loved in his past life.",
+    year: 2007,
+    rating: "U/A",
+    duration: "2h 42m",
+    genres: ["Drama", "Musical", "Romance"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 58,
+    title: "Peaky Blinders: The Immortal man",
+    img: "movies img/peakyblinders.jpg",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "A feature film conclusion to the epic saga of Thomas Shelby and his family as they navigate the aftermath of the war.",
+    year: 2025,
+    rating: "A",
+    duration: "2h 15m",
+    genres: ["Crime", "Drama"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 59,
+    title: "PK",
+    img: "movies img/pk.webp",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "An alien on Earth loses his communication device and questions social dogmas through his innocent perspective.",
+    year: 2014,
+    rating: "U/A",
+    duration: "2h 33m",
+    genres: ["Comedy", "Sci-Fi", "Drama"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 60,
+    title: "Pushpa: The Rule",
+    img: "movies img/pushpa2.webp",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "Pushpa Raj dominates the red sandalwood smuggling world, facing new enemies and internal conflicts in this epic sequel.",
+    year: 2024,
+    rating: "U/A 16+",
+    duration: "3h 20m",
+    genres: ["Action", "Crime", "Drama"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 62,
+    title: "Rab Ne Bana Di Jodi",
+    img: "movies img/rab ne bana di jodi.webp",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "A mild-mannered man creates a loud alter-ego to win the love of his vivacious wife in a dance competition.",
+    year: 2008,
+    rating: "U",
+    duration: "2h 47m",
+    genres: ["Comedy", "Drama", "Romance"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 63,
+    title: "Red Notice",
+    img: "movies img/rednotice.jpg",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "An FBI profiler chasing the world's most wanted art thief becomes her reluctant partner in crime to catch an elusive crook.",
+    year: 2021,
+    rating: "U/A 13+",
+    duration: "1h 58m",
+    genres: ["Action", "Comedy", "Crime"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 64,
+    title: "The RIP",
+    img: "movies img/RIP.jpg",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "A supernatural thriller where agents of the afterlife must prevent a catastrophic breach between worlds.",
+    year: 2025,
+    rating: "U/A 16+",
+    duration: "2h 05m",
+    genres: ["Action", "Fantasy", "Sci-Fi"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 65,
+    title: "RRR",
+    img: "movies img/RRR.webp",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "A fictional story about two legendary revolutionaries and their journey away from home before they started fighting for their country in the 1920s.",
+    year: 2022,
+    rating: "U/A 16+",
+    duration: "3h 07m",
+    genres: ["Action", "Drama"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 66,
+    title: "Saiyaara",
+    img: "movies img/Saiyaara.webp",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "A romantic drama that spans across borders, following two souls connected by fate and a shared love for music.",
+    year: 2025,
+    rating: "U/A 13+",
+    duration: "2h 15m",
+    genres: ["Romance", "Drama", "Musical"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 67,
+    title: "Sikandar ka mukaddar",
+    img: "movies img/sikander ka mukaddar.jpg",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "A hard-hitting heist thriller centered around a diamond robbery and a relentless pursuit by a determined cop.",
+    year: 2024,
+    rating: "U/A 16+",
+    duration: "2h 10m",
+    genres: ["Crime", "Thriller", "Drama"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 68,
+    title: "Sunny Sanskari Ki Tulsi Kumari",
+    img: "movies img/Sunny sanskari.webp",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "A vibrant romantic comedy following the cultural clashes and romantic sparks between Sunny and Tulsi.",
+    year: 2025,
+    rating: "U/A 13+",
+    duration: "2h 20m",
+    genres: ["Comedy", "Romance", "Drama"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 69,
+    title: "Uncharted",
+    img: "movies img/uncharted.webp",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "Street-smart Nathan Drake is recruited by seasoned treasure hunter Victor 'Sully' Sullivan to recover a fortune lost 500 years ago.",
+    year: 2022,
+    rating: "U/A 13+",
+    duration: "1h 56m",
+    genres: ["Action", "Adventure"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+  {
+    id: 70,
+    title: "war 2",
+    img: "movies img/war2.webp",
+    banner: "Images/popular image/adolescence img.jpg",
+    description: "Things get complicated when Kabir Dhaliwal, a secret agent, is accused of betraying his nation and his former batchmate shoulders the responsibility of finding him.",
+    year: 2025,
+    rating: "U/A 16+",
+    duration: "2h 53m",
+    genres: ["Explosive", "Action", "Thriller"],
+    type: "Movie",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+  },
+];
+
+/**
+ * CATEGORIES — Each row on the browse page.
+ * `filter` picks movies by ID. Allows the same movie in multiple categories.
+ */
+const CATEGORIES = [
+   {
+    name: "Action Movies",
+    showRank: false,
+    ids: [44,56,202,42,23,65,13,15,40,203,70,18]
+  },
+  {
+    name: "Top 10 Movies in India Today",
+    showRank: true,
+    ids: [1,202, 203, 58, 7, 54, 201, 51, 9, 4]
+  },
+  {
+    name: "Hollywood Movies",
+    showRank: false,
+    ids: [22,24,30,64,33,58,7,203,64,69,201,44]
+  },
+  
+  {
+    name: "Family Movies",
+    showRank: false,
+    ids: [22,43,26,206,41,47,59,54,62,57]
+  },
+  {
+    name: "Bollywood Sweetheart",
+    showRank: false,
+    ids: [20,31,206,207,36,45,48,57,62,66,4]
+  },
+  {
+    name: "Comedy Movies",
+    showRank: false,
+    ids: [47, 48, 49,13,26,28,62,68,34,59,32,67]
+  },
+  {
+    name: "Romantic Movies",
+    showRank: false,
+    ids: [4,57,19,62,28,66,21,68,32,201,206]
+  },
+  {
+    name: "South Indian",
+    showRank: false,
+    ids: [51,52,43,60,65,34,35,50]
+  },
+
+];
+
+/** Helper — get movie by ID */
+function getMovieById(id) {
+  return MOVIES.find(m => m.id === id);
+}
+
+/** Helper — get movies for a category */
+function getCategoryMovies(category) {
+  return category.ids.map(getMovieById).filter(Boolean);
+}
+
+/** Helper — get a random featured movie (for billboard) */
+function getRandomFeatured() {
+  const featured = [1, 5, 11, 12, 15]; // curated list for hero
+  const id = featured[Math.floor(Math.random() * featured.length)];
+  return getMovieById(id);
+}
