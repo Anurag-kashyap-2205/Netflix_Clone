@@ -1,164 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Netflix – Movies</title>
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/browse.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix – Movies</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/browse.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
 
-  <!-- ═══ NAVBAR ═══ -->
-  <nav class="browse-nav" id="browse-nav">
-    <div class="browse-nav__left">
-      <a href="browse.html" class="browse-nav__logo" aria-label="Netflix Home">
-        <img src="Images/vectorseek.com-Netflix-Logo-Vector.png" alt="Netflix" width="92" height="25">
-      </a>
-      <ul class="browse-nav__links" id="nav-links">
-        <li><a href="browse.html" >Home</a></li>
-        <li><a href="shows.html">TV Shows</a></li>
-        <li><a href="movies.html" >Movies</a></li>
-        <li><a href="new_popular.html" class="active">New &amp; Popular</a></li>
-        <li><a href="list.html">My List</a></li>
-      </ul>
-      <button class="browse-nav__mobile-menu" id="mobile-menu-btn" aria-label="Menu">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-    </div>
-    <div class="browse-nav__right">
-      <div class="search-container" id="search-container">
-        <button class="browse-nav__icon" id="search-btn" aria-label="Search">
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-        <input type="text" class="search-input" id="search-input" placeholder="Titles, people, genres">
+    <!-- ═══ NAVBAR ═══ -->
+    <nav class="browse-nav" id="browse-nav">
+        <div class="browse-nav__left">
+            <a href="browse.html" class="browse-nav__logo" aria-label="Netflix Home">
+                <img src="Images/vectorseek.com-Netflix-Logo-Vector.png" alt="Netflix" width="92" height="25">
+            </a>
+            <ul class="browse-nav__links" id="nav-links">
+                <li><a href="browse.html">Home</a></li>
+                <li><a href="shows.html">TV Shows</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="new_popular.html" class="active">New &amp; Popular</a></li>
+                <li><a href="list.html">My List</a></li>
+            </ul>
+            <button class="browse-nav__mobile-menu" id="mobile-menu-btn" aria-label="Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </div>
-      <button class="browse-nav__icon" aria-label="Notifications">
-        <i class="fa-solid fa-bell"></i>
-      </button>
-      <div class="profile" id="profile-toggle">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
-             alt="Profile" class="profile__avatar">
-        <i class="fa-solid fa-caret-down profile__caret"></i>
-        <div class="profile__dropdown" id="profile-dropdown">
-          <p class="profile__name" id="profile-name">User</p>
-          <hr>
-          <button id="logout-btn" class="profile__logout">
-            <i class="fa-solid fa-right-from-bracket"></i> Sign Out
-          </button>
+        <div class="browse-nav__right">
+            <div class="search-container" id="search-container">
+                <button class="browse-nav__icon" id="search-btn" aria-label="Search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <input type="text" class="search-input" id="search-input" placeholder="Titles, people, genres">
+            </div>
+            <button class="browse-nav__icon" aria-label="Notifications">
+                <i class="fa-solid fa-bell"></i>
+            </button>
+            <div class="profile" id="profile-toggle">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png" alt="Profile"
+                    class="profile__avatar">
+                <i class="fa-solid fa-caret-down profile__caret"></i>
+                <div class="profile__dropdown" id="profile-dropdown">
+                    <p class="profile__name" id="profile-name">User</p>
+                    <hr>
+                    <button id="logout-btn" class="profile__logout">
+                        <i class="fa-solid fa-right-from-bracket"></i> Sign Out
+                    </button>
+                </div>
+            </div>
         </div>
-      </div>
+    </nav>
+
+    <!-- Mobile nav overlay -->
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+        <ul id="mobile-nav-links">
+            <li><a href="browse.html">Home</a></li>
+            <li><a href="shows.html">TV Shows</a></li>
+            <li><a href="movies.html">Movies</a></li>
+            <li><a href="new_popular.html">New &amp; Popular</a></li>
+            <li><a href="list.html">My List</a></li>
+        </ul>
     </div>
-  </nav>
 
-  <!-- Mobile nav overlay -->
-  <div class="mobile-nav-overlay" id="mobile-nav-overlay">
-    <ul id="mobile-nav-links">
-      <li><a href="browse.html">Home</a></li>
-      <li><a href="shows.html">TV Shows</a></li>
-      <li><a href="movies.html">Movies</a></li>
-      <li><a href="new_popular.html">New &amp; Popular</a></li>
-      <li><a href="list.html">My List</a></li>
-    </ul>
-  </div>
 
-  <!-- ═══ BILLBOARD / HERO ═══ -->
-  <header class="billboard" id="billboard">
-    <div class="billboard__bg" id="billboard-bg"></div>
-    <div class="billboard__gradient"></div>
-    <div class="billboard__content">
-        <h1 style="margin-bottom: 90px;">New &amp; Popular</h1>
-      <h1 class="billboard__title" id="billboard-title"></h1>
-      <p class="billboard__desc" id="billboard-desc"></p>
-      <div class="billboard__actions">
-        <button class="btn btn--white btn--lg" id="billboard-play">
-          <i class="fa-solid fa-play"></i> Play
-        </button>
-        <button class="btn btn--dark btn--lg" id="billboard-info">
-          <i class="fa-solid fa-circle-info"></i> More Info
-        </button>
-      </div>
-    </div>
-  </header>
+    <!-- ═══ PAGE TITLE ═══ -->
+    <header class="popular-header">
+        <h1 class="popular-header__title">New & Popular</h1>
+    </header>
 
-  <!-- ═══ CONTENT ROWS ═══ -->
-  <main class="browse-main" id="browse-rows">
-    <!-- Dynamically rendered by browse.js -->
-  </main>
+    <!-- ═══ CONTENT ROWS ═══ -->
+    <main class="browse-main" id="browse-rows" style="margin-top: 0;">
+        <!-- Dynamically rendered by browse.js -->
+    </main>
 
-  <!-- ═══ MOVIE DETAIL MODAL ═══ -->
-  <div class="modal-overlay" id="modal-overlay">
-    <div class="modal" id="modal">
-      <button class="modal__close" id="modal-close" aria-label="Close">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
+    <!-- ═══ MOVIE DETAIL MODAL ═══ -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal" id="modal">
+            <button class="modal__close" id="modal-close" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
 
-      <!-- Video Player -->
-      <div class="modal__player" id="modal-player-container">
-        <video class="modal__video" id="modal-video" controls preload="metadata">
-          Your browser does not support the video tag.
-        </video>
-        <div class="modal__player-overlay" id="player-overlay">
-          <button class="modal__play-big" id="modal-play-big" aria-label="Play">
-            <i class="fa-solid fa-play"></i>
-          </button>
+            <!-- Video Player -->
+            <div class="modal__player" id="modal-player-container">
+                <video class="modal__video" id="modal-video" controls preload="metadata">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="modal__player-overlay" id="player-overlay">
+                    <button class="modal__play-big" id="modal-play-big" aria-label="Play">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Info -->
+            <div class="modal__info">
+                <div class="modal__meta">
+                    <span class="modal__match" id="modal-match">98% Match</span>
+                    <span class="modal__year" id="modal-year"></span>
+                    <span class="modal__rating-badge" id="modal-rating"></span>
+                    <span class="modal__duration" id="modal-duration"></span>
+                    <span class="modal__hd">HD</span>
+                </div>
+                <p class="modal__desc" id="modal-desc"></p>
+                <div class="modal__genres" id="modal-genres"></div>
+            </div>
         </div>
-      </div>
+    </div>
 
-      <!-- Info -->
-      <div class="modal__info">
-        <div class="modal__meta">
-          <span class="modal__match" id="modal-match">98% Match</span>
-          <span class="modal__year" id="modal-year"></span>
-          <span class="modal__rating-badge" id="modal-rating"></span>
-          <span class="modal__duration" id="modal-duration"></span>
-          <span class="modal__hd">HD</span>
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="browse-footer">
+        <div class="browse-footer__social">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
         </div>
-        <p class="modal__desc" id="modal-desc"></p>
-        <div class="modal__genres" id="modal-genres"></div>
-      </div>
-    </div>
-  </div>
+        <div class="browse-footer__grid">
+            <ul>
+                <li><a href="#">Audio Description</a></li>
+                <li><a href="#">Investor Relations</a></li>
+                <li><a href="#">Legal Notices</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Help Centre</a></li>
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#">Cookie Preferences</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Gift Cards</a></li>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Corporate Information</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Media Centre</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <p class="browse-footer__copy">Netflix Clone &copy; 2026</p>
+    </footer>
 
-  <!-- ═══ FOOTER ═══ -->
-  <footer class="browse-footer">
-    <div class="browse-footer__social">
-      <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-      <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-      <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
-      <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-    </div>
-    <div class="browse-footer__grid">
-      <ul>
-        <li><a href="#">Audio Description</a></li>
-        <li><a href="#">Investor Relations</a></li>
-        <li><a href="#">Legal Notices</a></li>
-      </ul>
-      <ul>
-        <li><a href="#">Help Centre</a></li>
-        <li><a href="#">Jobs</a></li>
-        <li><a href="#">Cookie Preferences</a></li>
-      </ul>
-      <ul>
-        <li><a href="#">Gift Cards</a></li>
-        <li><a href="#">Terms of Use</a></li>
-        <li><a href="#">Corporate Information</a></li>
-      </ul>
-      <ul>
-        <li><a href="#">Media Centre</a></li>
-        <li><a href="#">Privacy</a></li>
-        <li><a href="#">Contact Us</a></li>
-      </ul>
-    </div>
-    <p class="browse-footer__copy">Netflix Clone &copy; 2026</p>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="js/utils.js"></script>
-  <script src="js/moviedata.js"></script>
-  <script src="js/users.js"></script>
-  <script src="js/auth.js"></script>
-  <script src="js/browse.js"></script>
+    <!-- Scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/newdata.js"></script>
+    <script src="js/users.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/browse.js"></script>
 </body>
+
 </html>

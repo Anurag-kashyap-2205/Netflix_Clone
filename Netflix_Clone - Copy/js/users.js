@@ -96,3 +96,67 @@ function toggleMyList(movieId) {
   localStorage.setItem(`netflix_list_${session.email}`, JSON.stringify(list));
   return added;
 }
+/** Get Liked Movies */
+function getLikedMovies() {
+  const session = getSession();
+  if (!session) return [];
+  const raw = localStorage.getItem(`netflix_liked_${session.email}`);
+  return raw ? JSON.parse(raw) : [];
+}
+
+/** Toggle Like Movie */
+function toggleLikeMovie(movieId) {
+  const session = getSession();
+  if (!session) return false;
+  const list = getLikedMovies();
+  const index = list.indexOf(movieId);
+  let added = false;
+  if (index === -1) {
+    list.push(movieId);
+    added = true;
+    // Remove from dislikes if it was disliked
+    const disliked = getDislikedMovies();
+    const dIndex = disliked.indexOf(movieId);
+    if (dIndex !== -1) {
+      disliked.splice(dIndex, 1);
+      localStorage.setItem(`netflix_disliked_${session.email}`, JSON.stringify(disliked));
+    }
+  } else {
+    list.splice(index, 1); // remove like
+  }
+  localStorage.setItem(`netflix_liked_${session.email}`, JSON.stringify(list));
+  return added;
+}
+
+/** Get Disliked Movies */
+function getDislikedMovies() {
+  const session = getSession();
+  if (!session) return [];
+  const raw = localStorage.getItem(`netflix_disliked_${session.email}`);
+  return raw ? JSON.parse(raw) : [];
+}
+
+/** Toggle Dislike Movie */
+function toggleDislikeMovie(movieId) {
+  const session = getSession();
+  if (!session) return false;
+  const list = getDislikedMovies();
+  const index = list.indexOf(movieId);
+  let added = false;
+  if (index === -1) {
+    list.push(movieId);
+    added = true;
+    // Remove from likes if it was liked
+    const liked = getLikedMovies();
+    const lIndex = liked.indexOf(movieId);
+    if (lIndex !== -1) {
+      liked.splice(lIndex, 1);
+      localStorage.setItem(`netflix_liked_${session.email}`, JSON.stringify(liked));
+    }
+  } else {
+    list.splice(index, 1); // remove dislike
+  }
+  localStorage.setItem(`netflix_disliked_${session.email}`, JSON.stringify(list));
+  return added;
+}
+

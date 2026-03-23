@@ -20,23 +20,32 @@
      1. BILLBOARD
   ───────────────────────────────────────── */
   let featuredMovie = null;
-
   function renderBillboard() {
-    featuredMovie = getRandomFeatured();
+    const rankedCategory = CATEGORIES.find(cat => cat.showRank === true);
+    if (rankedCategory && rankedCategory.ids.length > 0) {
+      const randomId = rankedCategory.ids[Math.floor(Math.random() * rankedCategory.ids.length)];
+      featuredMovie = getMovieById(randomId);
+    } else {
+      featuredMovie = getRandomFeatured();
+    }
+
     const bg = $('#billboard-bg');
     const title = $('#billboard-title');
     const desc = $('#billboard-desc');
 
-    bg.style.backgroundImage = `url('${featuredMovie.banner}')`;
-    title.textContent = featuredMovie.title;
-    desc.textContent = featuredMovie.description;
+    if (bg) bg.style.backgroundImage = `url('${featuredMovie.banner}')`;
+    if (title) title.textContent = featuredMovie.title;
+    if (desc) desc.textContent = featuredMovie.description;
   }
 
   renderBillboard();
 
   // Billboard buttons
-  $('#billboard-play').addEventListener('click', () => openModal(featuredMovie.id, true));
-  $('#billboard-info').addEventListener('click', () => openModal(featuredMovie.id, false));
+  const playBtn = $('#billboard-play');
+  const infoBtn = $('#billboard-info');
+  if (playBtn) playBtn.addEventListener('click', () => openModal(featuredMovie.id, true));
+  if (infoBtn) infoBtn.addEventListener('click', () => openModal(featuredMovie.id, false));
+
 
 
 
@@ -78,7 +87,8 @@
           <div class="poster__controls">
             <button class="btn--icon play" data-play="${movie.id}" aria-label="Play"><i class="fa-solid fa-play"></i></button>
             <button class="btn--icon" data-add="${movie.id}" aria-label="Add to list"><i class="fa-solid ${getMyList().includes(movie.id) ? 'fa-check' : 'fa-plus'}"></i></button>
-            <button class="btn--icon" aria-label="Like"><i class="fa-regular fa-thumbs-up"></i></button>
+            <button class="btn--icon" data-like="${movie.id}" aria-label="Like"><i class="${getLikedMovies().includes(movie.id) ? 'fa-solid' : 'fa-regular'} fa-thumbs-up"></i></button>
+            <button class="btn--icon" data-dislike="${movie.id}" aria-label="Dislike"><i class="${getDislikedMovies().includes(movie.id) ? 'fa-solid' : 'fa-regular'} fa-thumbs-down"></i></button>
             <button class="btn--icon" style="margin-left:auto;" data-info="${movie.id}" aria-label="More info"><i class="fa-solid fa-chevron-down"></i></button>
           </div>
           <div class="poster__meta-row">
@@ -155,6 +165,38 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       addBtn.innerHTML = `<i class="fa-solid ${isAdded ? 'fa-check' : 'fa-plus'}"></i>`;
       showToast(isAdded ? 'Added to My List' : 'Removed from My List', 'success');
+      return;
+    }
+    // Like button
+    const likeBtn = e.target.closest('[data-like]');
+    if (likeBtn) {
+      e.stopPropagation();
+      const movieId = Number(likeBtn.dataset.like);
+      const isLiked = toggleLikeMovie(movieId);
+      likeBtn.innerHTML = `<i class="${isLiked ? 'fa-solid' : 'fa-regular'} fa-thumbs-up"></i>`;
+      
+      // Update dislike icon if it was previously disliked
+      const controls = likeBtn.closest('.poster__controls');
+      const dislikeBtn = controls ? controls.querySelector('[data-dislike="' + movieId + '"]') : null;
+      if (dislikeBtn) dislikeBtn.innerHTML = `<i class="fa-regular fa-thumbs-down"></i>`;
+      
+      // if (isLiked) showToast('Rated Netflix clone', 'success');
+      return;
+    }
+    // Dislike button
+    const dislikeBtn = e.target.closest('[data-dislike]');
+    if (dislikeBtn) {
+      e.stopPropagation();
+      const movieId = Number(dislikeBtn.dataset.dislike);
+      const isDisliked = toggleDislikeMovie(movieId);
+      dislikeBtn.innerHTML = `<i class="${isDisliked ? 'fa-solid' : 'fa-regular'} fa-thumbs-down"></i>`;
+      
+      // Update like icon if it was previously liked
+      const controls = dislikeBtn.closest('.poster__controls');
+      const likeButton = controls ? controls.querySelector('[data-like="' + movieId + '"]') : null;
+      if (likeButton) likeButton.innerHTML = `<i class="fa-regular fa-thumbs-up"></i>`;
+      
+      // if (isDisliked) showToast('Rated Netflix clone', 'success');
       return;
     }
     // Info button

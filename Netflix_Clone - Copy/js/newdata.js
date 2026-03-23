@@ -21,7 +21,7 @@ const MOVIES = [
     id: 2,
     title: "Hello Baccho",
     img: "shows img/hello bachho.jpg",
-    banner: "banners/hello bachhon.webp",
+    banner: "shows img/hello bachho.jpg",
     description: "A physics teacher sets out to make quality education accessible to all students through online learning,Based on the true story.",
     year: 2025,
     rating: "U/A 13+",
@@ -34,7 +34,7 @@ const MOVIES = [
     id: 3,
     title: "Kapil Sharma Show",
     img: "shows img/kapilshow.jpg",
-    banner: "banners/kapil sharma show.webp",
+    banner: "Images/trending image/kapil sharma show img.jpg",
     description: "India's favourite comedy show where Kapil Sharma hosts Bollywood stars and delivers laugh-out-loud performances every weekend.",
     year: 2024,
     rating: "U/A 13+",
@@ -47,7 +47,7 @@ const MOVIES = [
     id: 4,
     title: "Tere Ishq Mein",
     img: "movies img/tere ishq mein.webp",
-    banner: "banners/tere ishq mein.webp",
+    banner: "movies img/tere ishq mein.webp",
     description: "Shankar and Mukti's intense love story unfolds against the backdrop of Benaras, exploring surrender and transformation that heals, hurts and changes them.",
     year: 2025,
     rating: "U/A 16+",
@@ -86,7 +86,7 @@ const MOVIES = [
     id: 7,
     title: "Frankenstein",
     img: "movies img/frankenstein.jpg",
-    banner: "banners/frankstein.webp",
+    banner: "movies img/frankenstein.jpg",
     description: "A modern retelling of Mary Shelley's classic where a brilliant scientist's creation threatens to destroy everything he holds dear.",
     year: 2024,
     rating: "U/A 16+",
@@ -99,7 +99,7 @@ const MOVIES = [
     id: 8,
     title: "Mandala Murders",
     img: "shows img/mandala murders.jpg",
-    banner: "banners/mandala murders.webp",
+    banner: "Images/trending image/mandala murders img.webp",
     description: "Two investigators embark on a mission to uncover the enigma behind a series of murders, unveiling sinister secrets rooted in history.",
     year: 2024,
     rating: "A",
@@ -112,7 +112,7 @@ const MOVIES = [
     id: 9,
     title: "Raat Akeli Hai",
     img: "movies img/raat aleki hai.webp",
-    banner: "banners/raat akeli hai.webp",
+    banner: "Images/trending image/raat akeli hai img.webp",
     description: "A small-town cop investigates the murder of a wealthy patriarch on his wedding night, uncovering dark family secrets.",
     year: 2020,
     rating: "U/A 16+",
@@ -151,7 +151,7 @@ const MOVIES = [
     id: 202,
     title: "War Machine",
     img: "movies img/warmachine.jpg",
-    banner: "banners/war machine.webp",
+    banner: "Images/popular image/War Machine.jpg",
     description: "During the final stage of US Army Ranger selection, an elite team's training exercise turns into a fight for survival against an unimaginable threat.",
     year: 2026,
     rating: "U/A 16+",
@@ -164,7 +164,7 @@ const MOVIES = [
     id: 203,
     title: "Gladiator",
     img: "movies img/giladiator.jpg",
-    banner: "banners/gladiator.webp",
+    banner: "movies img/giladiator.jpg",
     description: "Years after witnessing the death of Maximus at the hands of his uncle, Lucius must enter the Colosseum after the powerful emperors of Rome conquer his home. With rage in his heart and the future of the empire at stake, he looks to the past to find the strength and honor needed to return the glory of Rome to its people.",
     year: 2024,
     rating: "U/A 16+",
@@ -177,7 +177,7 @@ const MOVIES = [
     id: 204,
     title: "One Piece",
     img: "shows img/one piece.avif",
-    banner: "banners/one piece.webp",
+    banner: "Images/popular image/One Piece.jpg",
     description: "Monkey D. Luffy and his pirate crew explore a fantastical world of endless oceans and exotic islands in search of the world's ultimate treasure to become the next Pirate King.",
     year: 2023,
     rating: "U/A 16+",
@@ -189,8 +189,8 @@ const MOVIES = [
   {
     id: 205,
     title: "Taskaree: The Smuggler's Web",
-    img: "banners/taskaree banner.webp",
-    banner: "banners/Taskaree.webp",
+    img: "shows img/taskaree.webp",
+    banner: "Images/popular image/Taskaree.jpg",
     description: "A dedicated customs officer and his team take on a notorious smuggler leading a powerful syndicate, but unexpected obstacles threaten their mission.",
     year: 2026,
     rating: "U/A 16+",
@@ -710,7 +710,7 @@ const MOVIES = [
     id: 51,
     title: "Maharaja",
     img: "movies img/maharaja.webp",
-    banner: "banners/maharaja.webp",
+    banner: "Images/popular image/adolescence img.jpg",
     description: "A barber seeks vengeance after his home is burgled, telling police his 'Lakshmi' has been stolen, leading to a twisted mystery.",
     year: 2024,
     rating: "U/A 16+",
@@ -749,7 +749,7 @@ const MOVIES = [
     id: 54,
     title: "Mahaavtaar Narsimha",
     img: "movies img/narsimha.webp",
-    banner: "banners/narsimha.webp",
+    banner: "Images/popular image/adolescence img.jpg",
     description: "An animated epic depicting the story of Lord Vishnu's fourth incarnation as Narsimha to defeat the demon king Hiranyakashipu.",
     year: 2024,
     rating: "U",
@@ -801,7 +801,7 @@ const MOVIES = [
     id: 58,
     title: "Peaky Blinders: The Immortal man",
     img: "movies img/peakyblinders.jpg",
-    banner: "banners/peaky blinders.webp",
+    banner: "Images/popular image/adolescence img.jpg",
     description: "A feature film conclusion to the epic saga of Thomas Shelby and his family as they navigate the aftermath of the war.",
     year: 2025,
     rating: "A",
@@ -1009,7 +1009,7 @@ const MOVIES = [
     id: 75,
     title: "Bads of Bollywood",
     img: "shows img/badsofbollywood.jpg",
-    banner: "banners/bads of Bollywood.webp",
+    banner: "Images/popular image/adolescence img.jpg",
     description: "A deep dive into the evolution of the 'villain' in Indian cinema, exploring the iconic actors who defined evil on screen.",
     year: 2024,
     rating: "U/A 13+",
@@ -1113,7 +1113,7 @@ const MOVIES = [
     id: 83,
     title: "Delhi Crime",
     img: "shows img/delhicrime.jpg",
-    banner: "banners/delhi crime.webp",
+    banner: "Images/popular image/adolescence img.jpg",
     description: "Based on real-life case files, this anthology series follows the Delhi Police as they investigate high-profile crimes.",
     year: 2019,
     rating: "A",
@@ -1191,7 +1191,7 @@ const MOVIES = [
     id: 89,
     title: "Heeramandi",
     img: "shows img/heeramandi.jpg",
-    banner: "banners/heeramandi.webp",
+    banner: "Images/popular image/adolescence img.jpg",
     description: "In pre-independent India, the lives of courtesans in the red-light district of Heera Mandi are filled with love, betrayal, and politics.",
     year: 2024,
     rating: "U/A 16+",
@@ -1243,7 +1243,7 @@ const MOVIES = [
     id: 93,
     title: "Jijutsu Kaisen",
     img: "shows img/jijutsu.webp",
-    banner: "banners/jijutsu kaisen.webp",
+    banner: "Images/popular image/adolescence img.jpg",
     description: "A boy swallows a cursed talisman and becomes cursed himself. He enters a shaman's school to be able to locate the demon's other body parts and thus exorcise himself.",
     year: 2020,
     rating: "A",
@@ -1650,84 +1650,34 @@ const MOVIES = [
  */
 const CATEGORIES = [
   {
-    name: "Top Picks For You",
+    name: "Popular on Netflix",
     showRank: false,
-    ids: [201,72,71,121,203,93,27,97,106,21,107]
-  },
+    ids: [11,5,12,79,77,82,71,73,75,10,81,85]
+},
   {
-    name: "Award Winning TV Shows",
+    name: "Indian Blocksbusters",
     showRank: false,
-    ids: [83,6,113,79,17,77,104,84,115,14,86,91]
-  },
-  {
-    name: "Action Movies",
-    showRank: false,
-    ids: [27,44,56,202,42,23,65,13,15,40,203,70,18]
-  },
-  {
-    name: "Crowd Pleasers",
-    showRank: false,
-    ids: [74,41,43,54,83,96,115,88,20,50,9,26]
-  },
-  {
+    ids: [60,1,23,207,45,31,59,65,66,4,]
+},
+{
     name: "Top 10 Movies in India Today",
     showRank: true,
     ids: [1,202, 203, 58, 7, 54, 201, 51, 9, 4]
   },
   {
-    name: "Comedies",
+    name: "Loved by Audience",
     showRank: false,
-    ids: [47, 48, 49,13,26,28,62,68,34,59,32,67]
+    ids: [31,12,79,207,16,79,113,121,58,57,81,82]
   },
   {
-    name: "Imaginative TV Shows",
-    showRank: false,
-    ids: [204,96,71,115,110,72,100,118,117,120]
-  },
-  {
-    name: "Romantic Movies",
-    showRank: false,
-    ids: [4,57,62,28,66,19,21,68,32,201]
-  },
-  {
-    name: "Top 10 TV Shows in India Today",
+    name: "Top 10 Shows in India Today",
     showRank: true,
     ids: [204,2,205,3,75,93,89,5,8,83]
   },
   {
-    name: "Thrillers",
+    name: "SuperNatural",
     showRank: false,
-    ids: [35,52,50,55,25,9,51,67,13,41]
-  },
-  {
-    name: "Spy and Mystery",
-    showRank: false,
-    ids: [36,40,1,42,13,67,70,53,47,48]
-  },
-  {
-    name: "Adventure",
-    showRank: false,
-    ids: [22,24,30,69,202,53,56,55,44,28]
-  },
-  {
-    name: "Anime",
-    showRank: false,
-    ids: [76,80,82,84,85,93,100,103,105,123,109]
-  },
-  {
-    name: "Indian Drama",
-    showRank: false,
-    ids: [89,47,92,108,32,16,205,23,39,43,59]
-  },
-  {
-    name: "Sci-Fi",
-    showRank: false,
-    ids: [24,11,33,105,71,72,38,45,22,202,5]
-  },
-  {
-    name: "Fantasy",
-    showRank: false,
-    ids: [6,30,34,56,74,84,93,96,97,110,112,115,118]
+    ids: [6,74,97,110,112,115,116,117,118,93]
   },
 
 ];

@@ -205,6 +205,20 @@
   color: var(--clr-text);
 }
 
+/* ─── Popular Page Title ─── */
+.popular-header {
+  padding: calc(var(--nav-height) + 10px) var(--page-pad) 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.popular-header__title {
+  font-size: clamp(1.8rem, 2.7vw, 3.5rem);
+  font-weight: 700;
+  color: var(--clr-text);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, .5);
+}
+
 
 /* ─── MY LIST ─── */
 .main{
@@ -319,10 +333,11 @@
   overflow-x: auto;
   scroll-behavior:smooth;
   scroll-snap-type: x mandatory;
-  padding: 30px 0 140px 0;
+  padding: 30px 0px 140px 0px;
   margin: -30px 0 -140px 0;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  scroll-padding-left: 60px;
 }
 .slider__track::-webkit-scrollbar { display: none; }
 
@@ -369,8 +384,16 @@
 
 .poster:hover {
   transform: scale(1.35);
-  z-index: 20;
+  z-index: 100;
   transition: transform var(--transition-med) .4s, z-index 0s;
+}
+
+.poster:first-child {
+  transform-origin: left center;
+}
+
+.poster:last-child {
+  transform-origin: right center;
 }
 
 .poster__img {
