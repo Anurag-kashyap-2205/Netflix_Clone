@@ -124,7 +124,7 @@ const MOVIES = [
   {
     id: 10,
     title: "Bridgerton",
-    img: "Shows img/brigeton.jpg",
+    img: "shows img/brigeton.jpg",
     banner: "Images/trending image/bridgeton img.jpg",
     description: "Set in the glamorous Regency era, the Bridgerton family navigates London's high society in search of love, intrigue, and scandal.",
     year: 2023,
@@ -813,7 +813,7 @@ const MOVIES = [
   {
     id: 59,
     title: "PK",
-    img: "movies img/pk.webp",
+    img: "movies img/PK.webp",
     banner: "Images/popular image/adolescence img.jpg",
     description: "An alien on Earth loses his communication device and questions social dogmas through his innocent perspective.",
     year: 2014,
@@ -891,7 +891,7 @@ const MOVIES = [
   {
     id: 66,
     title: "Saiyaara",
-    img: "movies img/Saiyaara.webp",
+    img: "movies img/saiyaara.webp",
     banner: "Images/popular image/adolescence img.jpg",
     description: "A romantic drama that spans across borders, following two souls connected by fate and a shared love for music.",
     year: 2025,
