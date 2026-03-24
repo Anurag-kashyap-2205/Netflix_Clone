@@ -644,7 +644,7 @@ const MOVIES = [
   {
     id: 59,
     title: "PK",
-    img: "movies img/pk.webp",
+    img: "movies img/PK.webp",
     banner: "Images/popular image/adolescence img.jpg",
     description: "An alien on Earth loses his communication device and questions social dogmas through his innocent perspective.",
     year: 2014,
@@ -722,7 +722,7 @@ const MOVIES = [
   {
     id: 66,
     title: "Saiyaara",
-    img: "movies img/Saiyaara.webp",
+    img: "movies img/saiyaara.webp",
     banner: "Images/popular image/adolescence img.jpg",
     description: "A romantic drama that spans across borders, following two souls connected by fate and a shared love for music.",
     year: 2025,
@@ -748,7 +748,7 @@ const MOVIES = [
   {
     id: 68,
     title: "Sunny Sanskari Ki Tulsi Kumari",
-    img: "movies img/Sunny sanskari.webp",
+    img: "movies img/sunny sanskari.webp",
     banner: "Images/popular image/adolescence img.jpg",
     description: "A vibrant romantic comedy following the cultural clashes and romantic sparks between Sunny and Tulsi.",
     year: 2025,

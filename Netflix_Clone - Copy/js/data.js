@@ -124,7 +124,7 @@ const MOVIES = [
   {
     id: 10,
     title: "Bridgerton",
-    img: "Shows img/brigeton.jpg",
+    img: "Shows img/Bridgerton.jpg",
     banner: "Images/trending image/bridgeton img.jpg",
     description: "Set in the glamorous Regency era, the Bridgerton family navigates London's high society in search of love, intrigue, and scandal.",
     year: 2023,
@@ -813,7 +813,7 @@ const MOVIES = [
   {
     id: 59,
     title: "PK",
-    img: "movies img/pk.webp",
+    img: "movies img/PK.webp",
     banner: "Images/popular image/adolescence img.jpg",
     description: "An alien on Earth loses his communication device and questions social dogmas through his innocent perspective.",
     year: 2014,
@@ -891,7 +891,7 @@ const MOVIES = [
   {
     id: 66,
     title: "Saiyaara",
-    img: "movies img/Saiyaara.webp",
+    img: "movies img/saiyaara.webp",
     banner: "Images/popular image/adolescence img.jpg",
     description: "A romantic drama that spans across borders, following two souls connected by fate and a shared love for music.",
     year: 2025,
@@ -917,7 +917,7 @@ const MOVIES = [
   {
     id: 68,
     title: "Sunny Sanskari Ki Tulsi Kumari",
-    img: "movies img/Sunny sanskari.webp",
+    img: "movies img/sunny sanskari.webp",
     banner: "Images/popular image/adolescence img.jpg",
     description: "A vibrant romantic comedy following the cultural clashes and romantic sparks between Sunny and Tulsi.",
     year: 2025,
@@ -1398,8 +1398,8 @@ const MOVIES = [
   {
     id: 105,
     title: "Parayte",
-    img: "shows img/Parasyte.webp",
-    banner: "shows img/Parayte.webp",
+    img: "shows img/parasyte.webp",
+    banner: "shows img/parasyte.webp",
     description: "A teenager's hand is taken over by a parasite, and they must work together to survive and stop others of its kind from consuming humanity.",
     year: 2014,
     rating: "A",
@@ -1411,7 +1411,7 @@ const MOVIES = [
   {
     id: 106,
     title: "Peaky Blinder",
-    img: "shows img/Peaky Blinders.jpg",
+    img: "shows img/peaky Blinders.jpg",
     banner: "shows img/Peaky Blinder.webp",
     description: "A gangster family epic set in 1900s England, centering on a gang who sew razor blades in the peaks of their caps.",
     year: 2013,
@@ -1437,7 +1437,7 @@ const MOVIES = [
   {
     id: 108,
     title: "Rana Naidu",
-    img: "shows img/Raina Naidu.jpg",
+    img: "shows img/raina Naidu.jpg",
     banner: "Images/popular image/adolescence img.jpg",
     description: "Rana Naidu is the go-to fixer for Bollywood's elite, but his life is thrown into chaos when his father is released from prison.",
     year: 2023,
