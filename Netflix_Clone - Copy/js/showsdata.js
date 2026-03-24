@@ -72,7 +72,7 @@ const MOVIES = [
   {
     id: 10,
     title: "Bridgerton",
-    img: "Shows img/Bridgerton.jpg",
+    img: "shows img/Bridgerton.jpg",
     banner: "Images/trending image/bridgeton img.jpg",
     description: "Set in the glamorous Regency era, the Bridgerton family navigates London's high society in search of love, intrigue, and scandal.",
     year: 2023,
@@ -657,7 +657,7 @@ const MOVIES = [
   {
     id: 106,
     title: "Peaky Blinder",
-    img: "shows img/peaky Blinders.jpg",
+    img: "shows img/peaky blinders.jpg",
     banner: "shows img/Peaky Blinder.webp",
     description: "A gangster family epic set in 1900s England, centering on a gang who sew razor blades in the peaks of their caps.",
     year: 2013,
@@ -683,7 +683,7 @@ const MOVIES = [
   {
     id: 108,
     title: "Rana Naidu",
-    img: "shows img/raina Naidu.jpg",
+    img: "shows img/raina naidu.jpg",
     banner: "Images/popular image/adolescence img.jpg",
     description: "Rana Naidu is the go-to fixer for Bollywood's elite, but his life is thrown into chaos when his father is released from prison.",
     year: 2023,
