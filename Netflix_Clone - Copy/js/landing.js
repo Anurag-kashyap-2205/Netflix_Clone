@@ -116,26 +116,33 @@ questions.forEach(question => {
 })();
 
 // sliders
+const slidersWrappers = document.querySelectorAll('.slider-wrapper');
 
-const slider = document.getElementById('trending-sliders');
-const leftBtn = document.querySelector('.left-handle');
+slidersWrappers.forEach(wrapper => {
+    const slider = wrapper.querySelector('.posters');
+    const leftBtn = wrapper.querySelector('.left-handler');
+    const rightBtn = wrapper.querySelector('.right-handler');
 
-leftBtn.style.visibility = 'hidden';
+    if (slider && leftBtn && rightBtn) {
+        // Initial state
+        leftBtn.style.visibility = 'hidden';
 
-// Function to handle showing/hiding the left button
-slider.addEventListener('scroll', () => {
-    if (slider.scrollLeft > 50) {
-        leftBtn.style.display = 'flex';
-    } else {
-        leftBtn.style.display = 'none';
+        // Scroll event to toggle left button visibility
+        slider.addEventListener('scroll', () => {
+            if (slider.scrollLeft > 50) {
+                leftBtn.style.visibility = 'visible';
+            } else {
+                leftBtn.style.visibility = 'hidden';
+            }
+        });
+
+        // Click events for scroll buttons
+        leftBtn.addEventListener('click', () => {
+            slider.scrollBy({ left: -730, behavior: 'smooth' });
+        });
+
+        rightBtn.addEventListener('click', () => {
+            slider.scrollBy({ left: 730, behavior: 'smooth' });
+        });
     }
 });
-function scrollLeftBtn() {
-    // This scrolls the row to the left by 600 pixels
-    slider.scrollBy({ left: -730, behavior: 'smooth' });
-};
-
-function scrollRightBtn() {
-    // This scrolls the row to the right by 600 pixels
-    slider.scrollBy({ left: 730, behavior: 'smooth' });
-};
