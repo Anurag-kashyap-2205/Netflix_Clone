@@ -24,7 +24,7 @@
   z-index: 10;
 }
 
-.nav__logo img { height: 36px; width: auto; }
+.nav__logo img { height: 40px; width: auto; }
 
 .nav__actions {
   display: flex;
