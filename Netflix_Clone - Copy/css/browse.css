@@ -640,6 +640,10 @@
   color: var(--clr-text-dim);
   font-size: .8rem;
 }
+.browse-footer p{
+  margin-bottom: var(--sp-lg);
+  font-size: 17px;
+}
 
 .browse-footer__social {
   display: flex;
