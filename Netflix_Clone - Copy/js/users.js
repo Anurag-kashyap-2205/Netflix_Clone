@@ -4,7 +4,7 @@
 
 /** Default dummy users */
 const DEFAULT_USERS = [
-  { email: "test@netflix.com",  password: "netflix123", name: "Anurag" },
+  { email: "test@netflix.com",  password: "netflix123", name: "Demo User" },
   { email: "demo@netflix.com",  password: "demo123",    name: "Demo User" },
   { email: "admin@netflix.com", password: "admin123",   name: "Admin" }
 ];
