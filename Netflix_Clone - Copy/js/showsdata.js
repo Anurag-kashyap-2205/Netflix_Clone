@@ -97,7 +97,7 @@ const MOVIES = [
   },
   {
     id: 205,
-    title: "Taskaree: The Smuggler's Web",
+    title: "Taskaree",
     img: "shows img/taskaree.webp",
     banner: "banners/taskaree banner.webp",
     description: "A dedicated customs officer and his team take on a notorious smuggler leading a powerful syndicate, but unexpected obstacles threaten their mission.",

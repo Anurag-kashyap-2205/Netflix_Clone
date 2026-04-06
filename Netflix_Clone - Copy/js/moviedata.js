@@ -87,7 +87,7 @@ const MOVIES = [
     title: "Gladiator",
     img: "movies img/giladiator.jpg",
     banner: "banners/gladiator.webp",
-    description: "Years after witnessing the death of Maximus at the hands of his uncle, Lucius must enter the Colosseum after the powerful emperors of Rome conquer his home. With rage in his heart and the future of the empire at stake, he looks to the past to find the strength and honor needed to return the glory of Rome to its people.",
+    description: "Years after witnessing the death of Maximus at the hands of his uncle, Lucius must enter the Colosseum after the powerful emperors of Rome conquer his home.",
     year: 2024,
     rating: "U/A 16+",
     duration: "2h 28m",
