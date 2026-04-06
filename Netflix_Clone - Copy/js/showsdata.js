@@ -99,7 +99,7 @@ const MOVIES = [
     id: 205,
     title: "Taskaree: The Smuggler's Web",
     img: "shows img/taskaree.webp",
-    banner: "banners/taskaree.webp",
+    banner: "banners/taskaree banner.webp",
     description: "A dedicated customs officer and his team take on a notorious smuggler leading a powerful syndicate, but unexpected obstacles threaten their mission.",
     year: 2026,
     rating: "U/A 16+",
