@@ -672,8 +672,8 @@
   justify-content: center;
   cursor: pointer;
   transition: border-color var(--transition-fast),
-              background var(--transition-fast),
-              transform var(--transition-fast);
+    background var(--transition-fast),
+    transform var(--transition-fast);
 }
 
 .modal__action-btn:hover {
@@ -682,7 +682,9 @@
   transform: scale(1.08);
 }
 
-.modal__action-btn:active { transform: scale(.95); }
+.modal__action-btn:active {
+  transform: scale(.95);
+}
 
 /* Play button is wider with text label */
 .modal__action-btn--play {
@@ -718,12 +720,21 @@
     flex-wrap: wrap;
     gap: 10px;
   }
+
   .modal__action-btn--play {
     flex: 1;
     justify-content: center;
   }
-  .modal__action-right { gap: 8px; }
-  .modal__action-btn { width: 34px; height: 34px; font-size: .9rem; }
+
+  .modal__action-right {
+    gap: 8px;
+  }
+
+  .modal__action-btn {
+    width: 34px;
+    height: 34px;
+    font-size: .9rem;
+  }
 }
 
 
@@ -1047,6 +1058,7 @@
   /* Content rows */
   .row {
     padding: 0 8px;
+    overflow: hidden;
     /* margin-bottom: var(--sp-md); */
   }
 
@@ -1061,6 +1073,10 @@
 
   .poster:hover {
     transform: none;
+  }
+
+  .slider {
+    overflow: hidden;
   }
 
   .slider__track {
