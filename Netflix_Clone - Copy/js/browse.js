@@ -262,16 +262,16 @@
 
     // Set video
     video.src = movie.videoUrl;
-    video.load();
     playerOverlay.classList.remove('hidden');
 
-    if (autoPlay) {
-      video.play().catch(() => { });
-      playerOverlay.classList.add('hidden');
-    }
-
+    // Show modal before playing to avoid browser block on hidden elements
     overlay.classList.add('open');
     document.body.style.overflow = 'hidden';
+
+    if (autoPlay) {
+      video.play().catch((e) => { console.error('Video play error:', e); });
+      playerOverlay.classList.add('hidden');
+    }
   }
 
   function closeModal() {
@@ -290,14 +290,14 @@
 
   // Play big button (poster overlay)
   $('#modal-play-big').addEventListener('click', () => {
-    video.play().catch(() => { });
+    video.play().catch(e => console.error("Big play button error:", e));
     playerOverlay.classList.add('hidden');
   });
 
   // Modal action bar — Play
   if (modalActionPlay) {
     modalActionPlay.addEventListener('click', () => {
-      video.play().catch(() => { });
+      video.play().catch(e => console.error("Action bar play error:", e));
       playerOverlay.classList.add('hidden');
       // Scroll video into view
       $('#modal-player-container').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
