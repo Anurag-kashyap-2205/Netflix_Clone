@@ -1068,7 +1068,7 @@
 
   /* Poster cards */
   .poster {
-    width: 100px;
+    width: 125px;
   }
 
   .poster:hover {
@@ -1083,6 +1083,7 @@
     gap: 5px;
     padding: 16px 0 80px;
     margin: -16px 0 -80px;
+    overflow-y: hidden;
   }
 
   /* Ranked */
