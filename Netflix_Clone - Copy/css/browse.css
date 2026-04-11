@@ -1067,8 +1067,8 @@
 
   /* Poster cards */
   .poster {
-    width: 140px;
-    height: 210px;
+    width: 150px;
+    height: 100px;
   }
 
   .poster:hover {
