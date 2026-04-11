@@ -1059,6 +1059,7 @@
   .row {
     padding: 0 8px;
     overflow: hidden;
+    /* margin-bottom: var(--sp-md); */
   }
 
   .browse-main {
@@ -1075,7 +1076,7 @@
   }
 
   .slider {
-    overflow: visible;
+    overflow: hidden;
   }
 
   .slider__track {
