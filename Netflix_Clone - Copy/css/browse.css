@@ -1059,7 +1059,6 @@
   .row {
     padding: 0 8px;
     overflow: hidden;
-    /* margin-bottom: var(--sp-md); */
   }
 
   .browse-main {
@@ -1068,7 +1067,8 @@
 
   /* Poster cards */
   .poster {
-    width: 100px;
+    width: 140px;
+    height: 210px;
   }
 
   .poster:hover {
@@ -1076,13 +1076,14 @@
   }
 
   .slider {
-    overflow: hidden;
+    overflow: visible;
   }
 
   .slider__track {
-    gap: 5px;
-    padding: 16px 0 80px;
-    margin: -16px 0 -80px;
+    gap: 8px;
+    padding: 16px 0;
+    margin: 0;
+    overflow-y: hidden;
   }
 
   /* Ranked */
