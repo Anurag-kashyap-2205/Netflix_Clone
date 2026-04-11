@@ -259,6 +259,7 @@
   display: flex;
   align-items: flex-end;
   padding-bottom: 15vh;
+  /* padding-top: 80px; Prevent content overflowing into navbar */
 }
 
 .billboard__bg {
@@ -282,6 +283,12 @@
   padding: 0 var(--page-pad);
   max-width: 650px;
 }
+
+.billboard__heading {
+  margin-bottom: 2rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
 
 .billboard__title {
   font-size: clamp(1.8rem, 4vw, 3.5rem);
@@ -907,6 +914,10 @@
     padding: 0 16px;
   }
 
+  .billboard__heading {
+    margin-bottom: 40px;
+  }
+
   .billboard__title {
     font-size: clamp(1.4rem, 5vw, 2rem);
   }
@@ -1026,6 +1037,11 @@
     min-height: 280px;
     padding-bottom: 8vh;
   }
+
+  .billboard__heading {
+    margin-bottom: 5px;
+  }
+
 
   .billboard__title {
     font-size: clamp(1.2rem, 6vw, 1.6rem);

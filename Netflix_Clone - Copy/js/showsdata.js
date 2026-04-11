@@ -15,7 +15,7 @@ const MOVIES = [
     duration: "5 Episodes",
     genres: ["Sincere", "Drama","Inspiring"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 3,
@@ -28,7 +28,7 @@ const MOVIES = [
     duration: "4 Seasons",
     genres: ["Comedy", "Talk Show","celebrities"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 5,
@@ -41,7 +41,7 @@ const MOVIES = [
     duration: "5 Seasons",
     genres: ["Sci-Fi", "Horror", "Drama"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 6,
@@ -54,7 +54,7 @@ const MOVIES = [
     duration: "2 Season",
     genres: ["Comedy", "Mystery", "Fantasy"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 8,
@@ -67,7 +67,7 @@ const MOVIES = [
     duration: "1 Season",
     genres: ["Crime", "Mystery", "Thriller"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 10,
@@ -80,7 +80,7 @@ const MOVIES = [
     duration: "4 Seasons",
     genres: ["Romance", "Drama", "Period"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 204,
@@ -93,7 +93,7 @@ const MOVIES = [
     duration: "2 Seasons",
     genres: ["Imaginative", "Adventure", "Rousing"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 205,
@@ -106,7 +106,7 @@ const MOVIES = [
     duration: "7 Episodes",
     genres: ["Crime", "Witty", "Thriller"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
     {
     id: 11,
@@ -119,7 +119,7 @@ const MOVIES = [
     duration: "3 Seasons",
     genres: ["Sci-Fi", "Mystery", "Mind-Bending"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 12,
@@ -132,7 +132,7 @@ const MOVIES = [
     duration: "5 Seasons",
     genres: ["Suspenseful", "Exciting", "Thriller"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 13,
@@ -145,7 +145,7 @@ const MOVIES = [
     duration: "1h 58m",
     genres: ["Action", "Comedy", "Thriller"],
     type: "Movie",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 14,
@@ -158,7 +158,7 @@ const MOVIES = [
     duration: "10 Episodes",
     genres: ["Crime", "Drama", "Biography"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 15,
@@ -171,7 +171,7 @@ const MOVIES = [
     duration: "1h 58m",
     genres: ["Action", "Thriller"],
     type: "Movie",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 16,
@@ -184,7 +184,7 @@ const MOVIES = [
     duration: "2 Seasons",
     genres: ["Crime", "Thriller", "Drama"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 17,
@@ -197,7 +197,7 @@ const MOVIES = [
     duration: "4 Episodes",
     genres: ["Drama", "Coming-of-Age", "Crime"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 71,
@@ -210,7 +210,7 @@ const MOVIES = [
     duration: "8 Episodes",
     genres: ["Sci-Fi", "Mystery", "Adventure"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 72,
@@ -223,7 +223,7 @@ const MOVIES = [
     duration: "2 Seasons",
     genres: ["Sci-Fi", "Thriller", "Action"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 73,
@@ -236,7 +236,7 @@ const MOVIES = [
     duration: "12 Episodes",
     genres: ["Horror", "Action", "Drama"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 74,
@@ -249,7 +249,7 @@ const MOVIES = [
     duration: "8 Episodes",
     genres: ["Fantasy", "Adventure", "Action"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 75,
@@ -262,7 +262,7 @@ const MOVIES = [
     duration: "1 Season",
     genres: ["Comedy", "Chilling","Bollywood"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 76,
@@ -275,7 +275,7 @@ const MOVIES = [
     duration: "2 Seasons",
     genres: ["Anime", "Action", "Martial Arts"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 77,
@@ -288,7 +288,7 @@ const MOVIES = [
     duration: "6 Seasons",
     genres: ["Crime", "Drama"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 78,
@@ -301,7 +301,7 @@ const MOVIES = [
     duration: "6 Episodes",
     genres: ["Thriller", "Crime", "Drama"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 79,
@@ -314,7 +314,7 @@ const MOVIES = [
     duration: "5 Seasons",
     genres: ["Crime", "Drama", "Thriller"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 80,
@@ -327,7 +327,7 @@ const MOVIES = [
     duration: "12 Episodes",
     genres: ["Anime", "Action", "Horror"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 81,
@@ -340,7 +340,7 @@ const MOVIES = [
     duration: "6 Seasons",
     genres: ["Action", "Comedy", "Drama"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 82,
@@ -353,7 +353,7 @@ const MOVIES = [
     duration: "37 Episodes",
     genres: ["Anime", "Mystery", "Thriller"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 83,
@@ -366,7 +366,7 @@ const MOVIES = [
     duration: "3 Seasons",
     genres: ["Crime", "Drama"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 84,
@@ -379,7 +379,7 @@ const MOVIES = [
     duration: "4 Seasons",
     genres: ["Anime", "Action", "Fantasy"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 85,
@@ -392,7 +392,7 @@ const MOVIES = [
     duration: "9 Seasons",
     genres: ["Anime", "Action", "Adventure"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 86,
@@ -405,7 +405,7 @@ const MOVIES = [
     duration: "8 Seasons",
     genres: ["Crime", "Drama", "Thriller"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 87,
@@ -418,7 +418,7 @@ const MOVIES = [
     duration: "4 Seasons",
     genres: ["Comedy", "Romance", "Drama"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 88,
@@ -431,7 +431,7 @@ const MOVIES = [
     duration: "7 Seasons",
     genres: ["Drama"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 89,
@@ -444,7 +444,7 @@ const MOVIES = [
     duration: "8 Episodes",
     genres: ["Drama", "History", "Romance"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 90,
@@ -457,7 +457,7 @@ const MOVIES = [
     duration: "2 Seasons",
     genres: ["Horror", "Mystery", "Crime"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 91,
@@ -470,7 +470,7 @@ const MOVIES = [
     duration: "6 Seasons",
     genres: ["Drama"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 92,
@@ -483,7 +483,7 @@ const MOVIES = [
     duration: "2 Seasons",
     genres: ["Crime", "Drama"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 93,
@@ -496,7 +496,7 @@ const MOVIES = [
     duration: "2 Seasons",
     genres: ["Anime", "Action", "Fantasy"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 94,
@@ -509,7 +509,7 @@ const MOVIES = [
     duration: "3 Seasons",
     genres: ["Comedy", "Drama"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 95,
@@ -522,7 +522,7 @@ const MOVIES = [
     duration: "10 Episodes",
     genres: ["Drama", "Action", "Mythology"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 96,
@@ -535,7 +535,7 @@ const MOVIES = [
     duration: "3 Seasons",
     genres: ["Fantasy", "Horror", "Mystery"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 97,
@@ -548,7 +548,7 @@ const MOVIES = [
     duration: "6 Seasons",
     genres: ["Crime", "Fantasy", "Drama"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 98,
@@ -561,7 +561,7 @@ const MOVIES = [
     duration: "8 Episodes",
     genres: ["Crime", "Thriller", "Mystery"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 99,
@@ -574,7 +574,7 @@ const MOVIES = [
     duration: "5 Seasons",
     genres: ["Action", "Crime", "Drama"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 100,
@@ -587,7 +587,7 @@ const MOVIES = [
     duration: "7 Seasons",
     genres: ["Anime", "Action", "Adventure"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 101,
@@ -600,7 +600,7 @@ const MOVIES = [
     duration: "3 Seasons",
     genres: ["Biography", "Crime", "Drama"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 102,
@@ -613,7 +613,7 @@ const MOVIES = [
     duration: "2 Seasons",
     genres: ["Anime", "Action", "Comedy"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 103,
@@ -626,7 +626,7 @@ const MOVIES = [
     duration: "21 Seasons",
     genres: ["Anime", "Action", "Adventure"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 104,
@@ -639,7 +639,7 @@ const MOVIES = [
     duration: "4 Seasons",
     genres: ["Crime", "Drama", "Thriller"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 105,
@@ -652,7 +652,7 @@ const MOVIES = [
     duration: "24 Episodes",
     genres: ["Anime", "Action", "Sci-Fi"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 106,
@@ -665,7 +665,7 @@ const MOVIES = [
     duration: "6 Seasons",
     genres: ["Crime", "Drama"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 107,
@@ -678,7 +678,7 @@ const MOVIES = [
     duration: "7 Episodes",
     genres: ["Drama"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 108,
@@ -691,7 +691,7 @@ const MOVIES = [
     duration: "1 Season",
     genres: ["Action", "Crime", "Drama"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 109,
@@ -704,7 +704,7 @@ const MOVIES = [
     duration: "12 Episodes",
     genres: ["Anime", "Action", "Comedy"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 110,
@@ -717,7 +717,7 @@ const MOVIES = [
     duration: "1 Season",
     genres: ["Fantasy", "Drama", "Mystery"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 111,
@@ -730,7 +730,7 @@ const MOVIES = [
     duration: "4 Seasons",
     genres: ["Comedy", "Drama"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 112,
@@ -743,7 +743,7 @@ const MOVIES = [
     duration: "2 Seasons",
     genres: ["Fantasy", "Action", "Drama"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 113,
@@ -756,7 +756,7 @@ const MOVIES = [
     duration: "2 Seasons",
     genres: ["Thriller", "Action", "Drama"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 114,
@@ -769,7 +769,7 @@ const MOVIES = [
     duration: "9 Seasons",
     genres: ["Comedy", "Drama"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 115,
@@ -782,7 +782,7 @@ const MOVIES = [
     duration: "3 Seasons",
     genres: ["Fantasy", "Action", "Adventure"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 116,
@@ -795,7 +795,7 @@ const MOVIES = [
     duration: "4 Seasons",
     genres: ["Action", "Adventure", "Crime"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 117,
@@ -808,7 +808,7 @@ const MOVIES = [
     duration: "4 Seasons",
     genres: ["Action", "Adventure", "Comedy"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 118,
@@ -821,7 +821,7 @@ const MOVIES = [
     duration: "8 Seasons",
     genres: ["Drama", "Fantasy", "Horror"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 119,
@@ -834,7 +834,7 @@ const MOVIES = [
     duration: "6 Seasons",
     genres: ["Action", "Adventure", "Drama"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 120,
@@ -847,7 +847,7 @@ const MOVIES = [
     duration: "11 Seasons",
     genres: ["Drama", "Horror", "Thriller"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 121,
@@ -860,7 +860,7 @@ const MOVIES = [
     duration: "4 Seasons",
     genres: ["Crime", "Drama", "Romance"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 122,
@@ -873,7 +873,7 @@ const MOVIES = [
     duration: "7 Seasons",
     genres: ["Comedy"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   },
   {
     id: 123,
@@ -886,7 +886,7 @@ const MOVIES = [
     duration: "4 Seasons",
     genres: ["Anime", "Action", "Adventure"],
     type: "TV Show",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
   }
 ];
 

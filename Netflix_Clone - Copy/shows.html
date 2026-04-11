@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
   <link rel="stylesheet" href="css/browse.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
 
   <!-- ═══ NAVBAR ═══ -->
@@ -17,10 +19,10 @@
         <img src="Images/Netflix-Logo.png" alt="Netflix" width="120" height="35">
       </a>
       <ul class="browse-nav__links" id="nav-links">
-        <li><a href="browse.html" >Home</a></li>
-        <li><a href="shows.html" class="active"  >TV Shows</a></li>
+        <li><a href="browse.html">Home</a></li>
+        <li><a href="shows.html" class="active">TV Shows</a></li>
         <li><a href="movies.html" ">Movies</a></li>
-        <li><a href="new_popular.html">New &amp; Popular</a></li>
+        <li><a href=" new_popular.html">New &amp; Popular</a></li>
         <li><a href="list.html">My List</a></li>
       </ul>
       <button class="browse-nav__mobile-menu" id="mobile-menu-btn" aria-label="Menu">
@@ -30,16 +32,16 @@
     <div class="browse-nav__right">
       <div class="search-container" id="search-container">
         <button class="browse-nav__icon" id="search-btn" aria-label="Search">
-            <i class="fa-solid fa-magnifying-glass"></i>
+          <i class="fa-solid fa-magnifying-glass"></i>
         </button>
         <input type="text" class="search-input" id="search-input" placeholder="Titles, people, genres">
-        </div>
+      </div>
       <button class="browse-nav__icon" aria-label="Notifications">
         <i class="fa-solid fa-bell"></i>
       </button>
       <div class="profile" id="profile-toggle">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
-             alt="Profile" class="profile__avatar">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png" alt="Profile"
+          class="profile__avatar">
         <i class="fa-solid fa-caret-down profile__caret"></i>
         <div class="profile__dropdown" id="profile-dropdown">
           <p class="profile__name" id="profile-name">User</p>
@@ -68,7 +70,7 @@
     <div class="billboard__bg" id="billboard-bg"></div>
     <div class="billboard__gradient"></div>
     <div class="billboard__content">
-        <h1 style="margin-bottom: 80px;">TV Shows</h1>
+      <h1 class="billboard__heading">TV Shows</h1>
       <h1 class="billboard__title" id="billboard-title"></h1>
       <p class="billboard__desc" id="billboard-desc"></p>
       <div class="billboard__actions">
@@ -102,6 +104,24 @@
         <div class="modal__player-overlay" id="player-overlay">
           <button class="modal__play-big" id="modal-play-big" aria-label="Play">
             <i class="fa-solid fa-play"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Action Bar -->
+      <div class="modal__actions" id="modal-actions">
+        <button class="modal__action-btn modal__action-btn--play" id="modal-action-play">
+          <i class="fa-solid fa-play"></i> Play
+        </button>
+        <div class="modal__action-right">
+          <button class="modal__action-btn" id="modal-action-add" aria-label="Add to list">
+            <i class="fa-solid fa-plus" id="modal-add-icon"></i>
+          </button>
+          <button class="modal__action-btn" id="modal-action-like" aria-label="Like">
+            <i class="fa-regular fa-thumbs-up" id="modal-like-icon"></i>
+          </button>
+          <button class="modal__action-btn" id="modal-action-dislike" aria-label="Dislike">
+            <i class="fa-regular fa-thumbs-down" id="modal-dislike-icon"></i>
           </button>
         </div>
       </div>
@@ -162,4 +182,5 @@
   <script src="js/auth.js"></script>
   <script src="js/browse.js"></script>
 </body>
+
 </html>

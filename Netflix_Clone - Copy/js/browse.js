@@ -289,8 +289,8 @@
   });
 
   // Play big button (poster overlay)
-  $('#modal-play-big').addEventListener('click', () => {
-    video.play().catch(e => console.error("Big play button error:", e));
+  playerOverlay.addEventListener('click', () => {
+    video.play().catch(e => console.error("Player overlay play error:", e));
     playerOverlay.classList.add('hidden');
   });
 
